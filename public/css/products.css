@@ -1,0 +1,15 @@
+body {
+  background-color: antiquewhite;
+}
+div {
+  display: flex;
+}
+li {
+  display: flex;
+  flex-direction: column;
+}
+ul {
+  height: 150px;
+  width: 200px;
+  border: 2px rgb(39, 39, 33) solid;
+}

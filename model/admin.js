@@ -7,12 +7,10 @@ class product {
     this.description = description;
   }
   saveData() {
-    products.push(
-      JSON.parse(this.title, this.imageUrl, this.price, this.description)
-    );
+    products.push(this);
   }
   fetchData() {
-    console.log(products);
+    // console.log(products);
     return products;
   }
 }
