@@ -2,8 +2,11 @@ const server = require("http");
 const express = require("express");
 const app = express();
 const port = 3001;
+const userRoutes = require("./routes/user.js");
+const adminRoutes = require("./routes/admin.js");
 server.createServer(app).listen(port, () => {});
-app.use("/", (req, res, next) => {
-  console.log("sever is running");
-  res.end("welcome the server is running");
-});
+app.set("view engine", "ejs");
+app.set("views", "views");
+app.use(express.static("public"));
+app.use(adminRoutes);
+app.use(userRoutes);
